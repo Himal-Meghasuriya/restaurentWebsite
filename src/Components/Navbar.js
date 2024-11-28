@@ -56,7 +56,7 @@ const Navbar = ({
   ];
 
   return (
-    <nav>
+    <nav className="Nav-CSS">
       <header className="nav-logo-container">
         <img src={Logo} alt="Logo" />
       </header>
@@ -68,9 +68,9 @@ const Navbar = ({
           </a>
         ))}
 
-        <a href="">
+        {/* <a href="">
           <BsCart2 className="Navbar-cart-items" />
-        </a>
+        </a> */}
 
         <button className="primary-button">Booking Now</button>
       </div>

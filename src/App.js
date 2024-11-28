@@ -9,6 +9,7 @@ import { useRef } from "react";
 import Navbar from "./Components/Navbar";
 
 function App() {
+  const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const workRef = useRef(null);
   const testimonialRef = useRef(null);
@@ -20,8 +21,9 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="MainDiv">
       <Navbar
+        homeRef={homeRef}
         testimonialRef={testimonialRef}
         aboutRef={aboutRef}
         workRef={workRef}
@@ -29,12 +31,15 @@ function App() {
         footerRef={footerRef}
         scrollToSection={scrollToSection}
       />
-      <Home />
-      <About aboutRef={aboutRef} />
-      <Work workRef={workRef} />
-      <Testimonials testimonialRef={testimonialRef} />
-      <Contact contactRef={contactRef} />
-      <Footer footerRef={footerRef} />
+
+      <div className="App">
+        <Home homeRef={homeRef} />
+        <About aboutRef={aboutRef} />
+        <Work workRef={workRef} />
+        <Testimonials testimonialRef={testimonialRef} />
+        <Contact contactRef={contactRef} />
+        <Footer footerRef={footerRef} />
+      </div>
     </div>
   );
 }
