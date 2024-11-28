@@ -1,5 +1,7 @@
 import React from "react";
 import Logo from "../Assets/Logo.svg";
+import Drawer from "@mui/material/Drawer";
+import Box from "@mui/material/Box";
 import { useState } from "react";
 import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
@@ -42,24 +44,20 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="nav-logo-container">
-        <img src={Logo} alt="" />
-      </div>
+      <header className="nav-logo-container">
+        <img src={Logo} alt="Logo" />
+      </header>
 
       <div className="navbar-links-container">
-        {menuOptions.map((item) => {
-          return (
-            <>
-              <a>{item.text}</a>
-            </>
-          );
-        })}
+        {menuOptions.map((item, index) => (
+          <a key={index}>{item.text}</a>
+        ))}
 
         <a href="">
           <BsCart2 className="Navbar-cart-items" />
         </a>
 
-        <button>Booking Now</button>
+        <button className="primary-button">Booking Now</button>
       </div>
 
       <div className="navbar-menu-container">
@@ -73,7 +71,7 @@ const Navbar = () => {
             onClose={() => setOpenMenu(false)}
             anchor="right"
           >
-            <box>
+            <box role="presentation" onClick={() => setOpenMenu(false)}>
               <list>
                 {menuOptions.map((item) => (
                   <ListItem key={item.text} disablePadding>
