@@ -17,28 +17,41 @@ import {
   ListItemText,
 } from "@mui/material";
 
-const Navbar = () => {
+const Navbar = ({
+  homeRef,
+  aboutRef,
+  testimonialRef,
+  contactRef,
+  cartRef,
+  scrollToSection,
+}) => {
   const [OpenMenu, setOpenMenu] = useState(false);
+
   const menuOptions = [
     {
       text: "Home",
       icon: <HomeIcon />,
+      ref: homeRef,
     },
     {
       text: "About",
       icon: <InfoIcon />,
+      ref: aboutRef,
     },
     {
       text: "Testimonials",
       icon: <CommentRoundedIcon />,
+      ref: testimonialRef,
     },
     {
       text: "Contact",
       icon: <PhoneRoundedIcon />,
+      ref: contactRef,
     },
     {
       text: "Cart",
       icon: <ShoppingCartRoundedIcon />,
+      ref: cartRef,
     },
   ];
 
@@ -50,7 +63,9 @@ const Navbar = () => {
 
       <div className="navbar-links-container">
         {menuOptions.map((item, index) => (
-          <a key={index}>{item.text}</a>
+          <a key={index} onClick={() => scrollToSection(item.ref)}>
+            {item.text}
+          </a>
         ))}
 
         <a href="">
@@ -75,7 +90,7 @@ const Navbar = () => {
               <list>
                 {menuOptions.map((item) => (
                   <ListItem key={item.text} disablePadding>
-                    <ListItemButton>
+                    <ListItemButton onClick={() => scrollToSection(item.ref)}>
                       <ListItemIcon>{item.icon}</ListItemIcon>
                       <ListItemText primary={item.text} />
                     </ListItemButton>

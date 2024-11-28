@@ -3,7 +3,7 @@ import PickMeals from "../Assets/pick-meals-image.png";
 import ChooseMeals from "../Assets/choose-image.png";
 import DeliveryMeals from "../Assets/delivery-image.png";
 
-const Work = () => {
+const Work = ({ workRef }) => {
   const workInfoDate = [
     {
       image: PickMeals,
@@ -22,7 +22,7 @@ const Work = () => {
     },
   ];
   return (
-    <div className="work-section-wrapper">
+    <div className="work-section-wrapper" ref={workRef}>
       <div className="work-section-top">
         <p className="primary-subheading">Work</p>
         <h1 className="primary-heading">How It Work</h1>

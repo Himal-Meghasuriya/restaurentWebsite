@@ -3,10 +3,9 @@ import Navbar from "./Navbar";
 import bannerbackground from "../Assets/home-banner-background.png";
 import { FiArrowRight } from "react-icons/fi";
 import BannerImage from "../Assets/home-banner-image.png";
-const Home = () => {
+const Home = ({ homeRef }) => {
   return (
-    <div className="Home-container">
-      <Navbar />
+    <div className="Home-container" ref={homeRef}>
       <div className="home-banner-container">
         <div className="home-bannerImage-container">
           <img src={bannerbackground} alt="" />

@@ -1,9 +1,9 @@
 import { ClassNames } from "@emotion/react";
 import React from "react";
 
-const Contact = () => {
+const Contact = ({ contactRef }) => {
   return (
-    <div ClassName="contact-page-wrapper">
+    <div className="contact-page-wrapper" ref={contactRef}>
       <h1 className="primary-heading">Have Question In Mind?</h1>
       <h1 className="primary-heading">Let Us Healp You</h1>
       <div className="contact-form-container">

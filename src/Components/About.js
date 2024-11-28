@@ -4,9 +4,9 @@ import AboutBackgroundImage from "../Assets/about-background-image.png";
 import { BsFillPlayCircleFill } from "react-icons/bs";
 import { RadioButtonCheckedOutlined } from "@mui/icons-material";
 
-const About = () => {
+const About = ({ aboutRef }) => {
   return (
-    <div className="about-section-container">
+    <div className="about-section-container" ref={aboutRef}>
       <div className="about-background-image-container">
         <img src={AboutBackground} alt="AboutBackground" />
       </div>

@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-section-two">
-        <div className="footer-section-colomn">
+        <div className="footer-section-columns">
           <span>Quality</span>
           <span>Healp</span>
           <span>Share</span>
@@ -28,13 +28,13 @@ const Footer = () => {
           <span>Testimonials</span>
           <span>Work</span>
         </div>
-        <div className="footer-section-colomns">
+        <div className="footer-section-columns">
           <span>244-5444-8444</span>
           <span>Hello@food.com</span>
           <span>Press@food.com</span>
           <span>Contact@food.com</span>
         </div>
-        <div className="Footer-section-colomn">
+        <div className="footer-section-columns">
           <span>Terms & Conditions</span>
           <span>Privacy Policy</span>
         </div>

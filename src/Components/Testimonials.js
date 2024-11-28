@@ -4,9 +4,9 @@ import { AiFillStar } from "react-icons/ai";
 import { ClassNames } from "@emotion/react";
 import { dividerClasses } from "@mui/material";
 
-const Testimonials = () => {
+const Testimonials = ({ testimonialRef }) => {
   return (
-    <div className="work-section-wrapper">
+    <div className="work-section-wrapper" ref={testimonialRef}>
       <div className="work-section-top">
         <p className="primary-subheading">Testimonials</p>
         <h1 className="primary-heading">What They Are Saying</h1>
